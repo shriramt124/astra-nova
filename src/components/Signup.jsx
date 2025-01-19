@@ -10,7 +10,7 @@ const SignupPage = ({ onLogin }) => {
         e.preventDefault();
         setIsLoading(true);
         // Simulate API call
-        const fullName = e.target.fullName.value;
+        const username = e.target.fullName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
 
@@ -20,7 +20,7 @@ const SignupPage = ({ onLogin }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ fullName, email, password }),
+                body: JSON.stringify({ username, email, password }),
             });
 
             if (response.ok) {
